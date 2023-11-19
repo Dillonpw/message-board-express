@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+        <title><%= title %></title>
+    </head>
+    <body>
+        <h1 class="header"><%= title %></h1>
+        <div class="content">
+            <% messages.forEach(function(message) { %>
+            <p><strong><%= message.user %>: </strong> <%= message.text %></p>
+            <% }); %>
+        </div>
+
+        <button onclick="location.href='/new'">New Message</button>
+        <footer class="credits">
+            <p id="credit1">
+                Created by Dillon Walsh. For more of my work check
+                <a
+                    id="profile-link"
+                    href="https://github.com/Dillonpw/projects"
+                    target="_blank"
+                    >Github</a
+                >
+            </p>
+            <p>&copy;2023 All Rights Reserved</p>
+        </footer>
+    </body>
+</html>
